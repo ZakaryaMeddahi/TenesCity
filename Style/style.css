@@ -1,0 +1,296 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #F0F0F0;
+    padding: 0 80px;
+    box-shadow: 0 4px 4px #0003;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-header {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo h3 {
+    color: #613BEB;
+    text-shadow: 0 4px 4px #0002;
+    padding-right: 20px;
+    border-right: 2px solid #000;
+}
+
+.left-header a {
+    color: #505050;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.left-header .places {
+    color: #613BEB;
+    border-bottom: 4px solid #613BEB;
+}
+
+.left-header .users {
+    color: #613BEB;
+    border-bottom: 4px solid #613BEB;
+}
+
+.profile {
+    width: 9.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 27px;
+    height: 27px;
+    border: 2px solid #613BEB;
+    border-radius: 50%;
+}
+
+.profile span {
+    text-transform: capitalize;
+}
+
+.table-container {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page-title {
+    text-transform: capitalize;
+    width: 80%;
+    margin: 50px 0 0;
+}
+
+.table-container div h2 {
+    text-align: start;
+}
+
+.table {
+    background-color: #EAEAEA;
+    width: 80%;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px #613BEB95;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+th, td {
+    background-color: #fff;
+    color: #613BEB;
+    text-transform: capitalize;
+    height: 50px;
+    width: 180px;
+    text-align: center;
+}
+
+th {
+    font-family: Roboto;
+    font-size: 1.1em;
+}
+
+td {
+    color: #0009;
+    font-size: 0.8em;
+    height: 60px;
+}
+
+.first-cell {
+    border-radius: 10px 0 0 10px;
+}
+
+.last-cell {
+    border-radius: 0 10px 10px 0;
+}
+
+th input, td input {
+    background-color: #eeeeee;
+    color: #3B77EB;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 4px #0002;
+}
+
+th input:hover, td input:hover {
+    border: 1px solid #613BEB;
+}
+
+.role span {
+    background-color: #eee;
+    color: #000;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 4px #0001;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars {
+    width: 30px !important;
+    height: 30px;
+    margin-right: 10px;
+    box-shadow: 0 4px 4px #000000;
+}
+
+td input[value="Delete"] {
+    color: red;
+}
+
+tr {
+    margin-top: 50px;
+    box-shadow: 0 4px 4px #0002;
+    border-radius: 10px;
+}
+
+/* Log In Part */
+
+.log-in {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gray-box {
+    width: 450px;
+    height: 500px;
+    background-color: #F0F0F0;
+    text-transform: capitalize;
+    border-radius: 25px;
+    box-shadow: 0 4px 4px #0002;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.white-box {
+    width: 100%;
+    height: 88%;
+    background-color: #fff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gray-box h3 {
+    font-family: Roboto;
+    font-size: 1.2em;
+    color: #613BEB;
+    margin-top: 4%;
+}
+
+form {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.take-input , .take-input {
+    display: block;
+}
+
+.checkbox {
+    width: 120px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox label {
+    font-size: 0.8em;
+}
+
+.email > input, .password > input {
+    font-family: Roboto;
+    width: 320px;
+    height: 50px;
+    font-size: 1em;
+    padding: 0 10px;
+    margin-top: 1px;
+    border: 2px solid #F2F3F9;
+    outline-color: #613BEB;
+    border-radius: 10px;
+}
+
+#submit {
+    font-size: 1.1em;
+    width: 320px;
+    height: 50px;
+    margin: 30px 0 0;
+    background-color: #613BEB;
+    color: #eee;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px #0002;
+}
+
+/* member Log In part */
+
+.purple-box {
+    width: 1100px;
+    height: 650px;
+    background-color: #613BEB;
+    border-radius: 25px;
+    box-shadow: 0 4px 4px #0004;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image {
+    width: 50%;
+    height: 100%;
+    background-image: url("https://www.hdnicewallpapers.com/Walls/Big/Rainbow/Rainbow_on_Mountain_HD_Image.jpg") cover center;
+    border-radius: 25px 0 0 25px;
+}
+
+
+.registration {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.box-headers {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
