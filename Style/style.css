@@ -21,7 +21,13 @@ header {
 }
 
 .left-header {
-    width: 25%;
+    width: 23%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    width: 44%;
     display: flex;
     justify-content: space-between;
 }
@@ -33,18 +39,14 @@ header {
     border-right: 2px solid #000;
 }
 
-.left-header a {
+.left-header div a {
     color: #505050;
     text-decoration: none;
     text-transform: capitalize;
+    transition: 0.2s ease-in-out 0.3s;
 }
 
-.left-header .places {
-    color: #613BEB;
-    border-bottom: 4px solid #613BEB;
-}
-
-.left-header .users {
+#active, .left-header div a:hover{
     color: #613BEB;
     border-bottom: 4px solid #613BEB;
 }
@@ -208,11 +210,17 @@ tr {
     align-items: center;
 }
 
-.gray-box h3 {
+.register {
     font-family: Roboto;
     font-size: 1.2em;
-    color: #613BEB;
+    color: #613BEB50;
     margin-top: 4%;
+    cursor: pointer;
+    transition: color 0.2s linear 0.2s;
+}
+
+.active, .register:hover {
+    color: #613BEB;
 }
 
 form {
@@ -220,6 +228,17 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+form[action="sign-up"] {
+    height: 90%;
+}
+
+.gray-box > h3 {
+    font-family: Roboto;
+    font-size: 1.2em;
+    color: #613BEB;
+    margin-top: 20px;
 }
 
 .take-input , .take-input {
@@ -238,7 +257,7 @@ form {
     font-size: 0.8em;
 }
 
-.email > input, .password > input {
+#name, #email, #password {
     font-family: Roboto;
     width: 320px;
     height: 50px;
@@ -278,10 +297,46 @@ form {
 .image {
     width: 50%;
     height: 100%;
-    background-image: url("https://www.hdnicewallpapers.com/Walls/Big/Rainbow/Rainbow_on_Mountain_HD_Image.jpg") cover center;
+    background-image: url("https://www.hdnicewallpapers.com/Walls/Big/Rainbow/Rainbow_on_Mountain_HD_Image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 25px 0 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.image div {
+    width: 70%;
+    height: 30%;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+.image div h2 {
+    color: #EAEAEA;
+    text-shadow: 0 1px 2px #000;
+}
+
+.image div p {
+    font-size: 0.9em;
+    color: #eeeeee;
+    text-shadow: 0 1px 1px #000;
+    text-align: center;
+}
+
+.image div p span {
+    font-style: italic;
+    display: block;
+    position: relative;
+    right: 120px;
+    top: 10px;
+}
 
 .registration {
     width: 50%;
@@ -291,6 +346,8 @@ form {
 
 .box-headers {
     width: 80%;
+    height: 8%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
