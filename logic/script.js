@@ -1,44 +1,67 @@
 
-const checkBox = document.getElementById("show-password")
+const graybox = document.querySelector(".formContainer")
+const signUpMode = graybox.querySelector("#sign-up")
+const logInMode = graybox.querySelector("#log-in")
+
+const checkBox = document.querySelector("#show-password")
 const submit = document.getElementById("submit")
 
 
+// function changeRegisterStatus() {
+
+//     const registrationMode = document.getElementsByClassName("register")
+//     var signUpMode = graybox.querySelector("#sign-up").cloneNode(true)
+//     var logInMode = graybox.querySelector("#log-in").cloneNode(true)
+
+//     registrationMode[0].classList.toggle("active")
+//     registrationMode[1].classList.toggle("active")
+
+//     if(registrationMode[0].classList.contains("active")) {
+//         graybox.appendChild(signUpMode)
+//         graybox.removeChild(document.getElementById("log-in"))
+//     } else {
+//         graybox.appendChild(logInMode)
+//         graybox.removeChild(document.getElementById("sign-up"))
+//     }
+    
+// }
+
 function changeRegisterStatus() {
 
-    const registrationHeader = document.getElementsByClassName("register")
-    const signUpMode = document.getElementById("sign-up")
-    const logInMode = document.getElementById("log-in")
+    const registrationMode = document.getElementsByClassName("register")
 
-    registrationHeader[0].classList.toggle("active")
-    registrationHeader[1].classList.toggle("active")
+    registrationMode[0].classList.toggle("active")
+    registrationMode[1].classList.toggle("active")
 
-    if(signUpMode.style.display === "none") {
-        signUpMode.style.setProperty("display", "flex")
-        logInMode.style.setProperty("display", "none")
+    if(registrationMode[0].classList.contains("active")) {
+        signUpMode.style.display = "flex"
+        logInMode.style.display = "none"
+
     } else {
-        signUpMode.style.setProperty("display", "none")
-        logInMode.style.setProperty("display", "flex")
+        signUpMode.style.display = "none"
+        logInMode.style.display = "flex"
     }
     
 }
 
 
-// submit.addEventListener("click", function() {
+submit.addEventListener("submit", function() {
     
-//     const str = document.getElementById()
-//     const error = document.querySelector(".error-password")
+    const password = document.getElementById("password").value
+    const error = document.querySelector(".error-password")
 
-//     if(str.length > 14) {
-//         error.innerHTML = "the password must have less than 15 characters"
-//     } else if(str.length < 8) {
-//         error.innerHTML = "the password must have more than 7 characters"
-//     }
-// })
+    if(password.length > 14) {
+        error.innerHTML = "password must have less than 15 characters"
+    }
+    else if(password.length < 8) {
+        error.innerHTML = "password must have more than 7 characters"
+    }
+})
 
 
 checkBox.addEventListener("click", function() {
 
-    const showPassword = document.getElementById("password")
+    const showPassword = document.querySelector("#password")
 
     if(checkBox.checked) {
         showPassword.type = "text"

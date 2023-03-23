@@ -9,7 +9,7 @@ body {
     background-color: #F5F5F5;
 }
 
-header {
+.header {
     width: 100%;
     height: 50px;
     background-color: #F0F0F0;
@@ -97,12 +97,29 @@ header {
     box-shadow: 0 4px 4px #613BEB95;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    
+}
+
+.table::-webkit-scrollbar {
+    background-color: #fff;
+    width: 5px;
+    border-radius: 0 25px 25px 0;
+}
+
+.table::-webkit-scrollbar-thumb {
+    background-color: #613BEB;
 }
 
 table {
     border-collapse: separate;
     border-spacing: 0 20px;
+}
+
+thead {
+    position: sticky;
+    top: 0px;
 }
 
 th, td {
@@ -245,6 +262,18 @@ form[action="sign-up"] {
     display: block;
 }
 
+.password {
+    position: relative;
+}
+
+.error-password {
+    font-size: 0.6em;
+    color: red;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+
 .checkbox {
     width: 120px;
     margin-top: 5px;
@@ -351,3 +380,21 @@ form[action="sign-up"] {
     justify-content: space-around;
     align-items: center;
 }
+
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+ #map {
+    height: 100%;
+  }
+  
+  /* 
+   * Optional: Makes the sample page fill the window. 
+   */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
