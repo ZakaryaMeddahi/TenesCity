@@ -33,24 +33,24 @@
                         
                         <div class="white-box" id="sign-up">
                             
-                            <form action="sign-up" method="post">
+                            <form action="sign-up" method="post" onchange="displayPasswordStatus()">
                                 <div class="name take-input">
                                     <label for="name" class="take-input">full name</label>
                                     <input type="text" id="name" placeholder="Enter your name">
                                 </div>
-                                <div class="email take-input">
+                                <div class="email">
                                     <label for="email" class="take-input">email address</label>
-                                    <input type="email" id="signUp-email" placeholder="Enter your email">
+                                    <input type="email" id="email" placeholder="Enter your email">
                                 </div>
                                 <div class="password">
-                                    <label for="password"  class="take-input">password</label>
+                                    <label for="password" class="take-input">password</label>
                                     <input type="password" id="password" placeholder="Enter your password">
-                                    <span class="error-password">password must have less than 15 characters</span>
+                                    <span class="error-password first"></span>
                                 </div>
                                 <div class="password">
-                                    <label for="password"  class="take-input">password</label>
+                                    <label for="password" class="take-input">password</label>
                                     <input type="password" id="password" placeholder="Repeat password">
-                                    <span class="error-password">password must have less than 15 characters</span>
+                                    <span class="error-password second"></span>
                                 </div>
                                 <input type="submit" id="submit">
                             </form>
@@ -58,15 +58,15 @@
 
                         <!-- Log In Form -->
                         <div class="white-box" id="log-in" style="display: none;">
-                            <form action="log-in" method="post">
+                            <form action="log-in" method="post" onchange="displayPasswordStatus()">
                                 <div class="email take-input">
                                     <label for="email" class="take-input">email address</label>
                                     <input type="email" id="email" placeholder="Enter your email">
                                 </div>
                                 <div class="password">
-                                    <label for="password"  class="take-input">password</label>
+                                    <label for="password" class="take-input">password</label>
                                     <input type="password" id="password" placeholder="Enter your password">
-                                    <span class="error"></span>
+                                    <span class="error-password"></span>
 
                                     <div class="checkbox">
                                         <input type="checkbox" id="show-password" class="show-password">

@@ -1,34 +1,12 @@
 
 const graybox = document.querySelector(".formContainer")
-const signUpMode = graybox.querySelector("#sign-up")
-const logInMode = graybox.querySelector("#log-in")
-
-const checkBox = document.querySelector("#show-password")
-const submit = document.getElementById("submit")
-
-
-// function changeRegisterStatus() {
-
-//     const registrationMode = document.getElementsByClassName("register")
-//     var signUpMode = graybox.querySelector("#sign-up").cloneNode(true)
-//     var logInMode = graybox.querySelector("#log-in").cloneNode(true)
-
-//     registrationMode[0].classList.toggle("active")
-//     registrationMode[1].classList.toggle("active")
-
-//     if(registrationMode[0].classList.contains("active")) {
-//         graybox.appendChild(signUpMode)
-//         graybox.removeChild(document.getElementById("log-in"))
-//     } else {
-//         graybox.appendChild(logInMode)
-//         graybox.removeChild(document.getElementById("sign-up"))
-//     }
-    
-// }
+//const submit = document.getElementById("submit")
 
 function changeRegisterStatus() {
 
     const registrationMode = document.getElementsByClassName("register")
+    const signUpMode = graybox.querySelector("#sign-up")
+    const logInMode = graybox.querySelector("#log-in")
 
     registrationMode[0].classList.toggle("active")
     registrationMode[1].classList.toggle("active")
@@ -45,28 +23,45 @@ function changeRegisterStatus() {
 }
 
 
-submit.addEventListener("submit", function() {
-    
-    const password = document.getElementById("password").value
-    const error = document.querySelector(".error-password")
+const passwordElement = document.querySelectorAll("#password")
 
-    if(password.length > 14) {
-        error.innerHTML = "password must have less than 15 characters"
-    }
-    else if(password.length < 8) {
-        error.innerHTML = "password must have more than 7 characters"
-    }
-})
+function displayPasswordStatus() {
 
+    passwordElement.forEach(element => {
+
+        const password = element.value
+        const error = element.parentElement.querySelector(".error-password")
+        console.log(error)
+        element.addEventListener("blur", function() {
+
+            if(password.length > 14) {
+                error.innerHTML = "password must have less than 15 characters"
+                error.style.color = "red"
+            }
+            else if(password.length < 8) {
+                error.innerHTML = "password must have more than 7 characters"
+                error.style.color = "red"
+            }
+            else {
+                error.innerHTML = "you're good to go"
+                error.style.color = "green"
+            }
+        })
+    });
+        
+}
+
+
+const checkBox = document.querySelector("#show-password")
 
 checkBox.addEventListener("click", function() {
 
-    const showPassword = document.querySelector("#password")
+    const passwordStatus = checkBox.parentElement.parentElement.querySelector("#password")
 
     if(checkBox.checked) {
-        showPassword.type = "text"
+        passwordStatus.type = "text"
     } else {
-        showPassword.type = "password"
+            passwordStatus.type = "password"
     }
 })
 
