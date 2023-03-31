@@ -35,24 +35,27 @@
                             
                             <form action="sign-up" method="post" onchange="displayPasswordStatus()">
                                 <div class="name take-input">
-                                    <label for="name" class="take-input">full name</label>
+                                    <label for="name">full name</label>
                                     <input type="text" id="name" placeholder="Enter your name">
                                 </div>
-                                <div class="email">
+                                <div class="email take-input">
                                     <label for="email" class="take-input">email address</label>
                                     <input type="email" id="email" placeholder="Enter your email">
                                 </div>
-                                <div class="password">
-                                    <label for="password" class="take-input">password</label>
+                                <div class="password take-input">
+                                    <label for="password">password</label>
                                     <input type="password" id="password" placeholder="Enter your password">
                                     <span class="error-password first"></span>
                                 </div>
-                                <div class="password">
-                                    <label for="password" class="take-input">password</label>
+                                <div class="password take-input">
+                                    <label for="password">password</label>
                                     <input type="password" id="password" placeholder="Repeat password">
                                     <span class="error-password second"></span>
                                 </div>
-                                <input type="submit" id="submit">
+                                <div class="take-input">
+                                    <input type="submit" id="submit" value="Sign Up">
+                                </div>
+                                
                             </form>
                         </div>
 
@@ -60,11 +63,11 @@
                         <div class="white-box" id="log-in" style="display: none;">
                             <form action="log-in" method="post" onchange="displayPasswordStatus()">
                                 <div class="email take-input">
-                                    <label for="email" class="take-input">email address</label>
+                                    <label for="email">email address</label>
                                     <input type="email" id="email" placeholder="Enter your email">
                                 </div>
-                                <div class="password">
-                                    <label for="password" class="take-input">password</label>
+                                <div class="password take-input">
+                                    <label for="password">password</label>
                                     <input type="password" id="password" placeholder="Enter your password">
                                     <span class="error-password"></span>
 
@@ -73,7 +76,10 @@
                                         <label for="show-password">show password</label>
                                     </div>
                                 </div>
-                                <input type="submit" id="submit">
+                                <div class="take-input">
+                                    <input type="submit" id="submit" value="Log In">
+                                </div>
+                                
                             </form>
                         </div>
 
