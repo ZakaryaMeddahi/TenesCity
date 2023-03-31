@@ -22,7 +22,7 @@
           <h3>TenesCity</h3>
         </div>
         <div class="nav">
-          <a class="places" href="">places</a>
+          <a class="places" href="./adminPlaces.html">places</a>
           <a class="users" id="active" href="">users</a>
         </div>
       </div>
@@ -49,54 +49,97 @@
               <th>role</th>
               <th></th>
               <th class="last-cell">
-                <input type="button" value="Add user" />
+                <input type="button" value="Add user" id="open_popup"/>
               </th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="first-cell">steve jobs</td>
-              <td>SteveJobs@gmail.com</td>
-              <td>123456789</td>
-              <td class="role"><span>admin</span></td>
-              <td><input type="button" value="Delete" /></td>
+            <tr class="table-row hidden">
+              <td id="user-name" class="first-cell">steve jobs</td>
+              <td id="user-email">SteveJobs@gmail.com</td>
+              <td id="user-password">123456789</td>
+              <td class="role"><span id="user-role">admin</span></td>
+              <td><input type="button" value="Delete" id="open_delete-popup" /></td>
               <td class="last-cell"><input type="button" value="Modify" /></td>
             </tr>
-            <tr>
-              <td class="first-cell">steve jobs</td>
-              <td>SteveJobs@gmail.com</td>
-              <td>123456789</td>
-              <td class="role"><span>admin</span></td>
-              <td><input type="button" value="Delete" /></td>
-              <td class="last-cell"><input type="button" value="Modify" /></td>
-            </tr>
-            <tr>
-              <td class="first-cell">steve jobs</td>
-              <td>SteveJobs@gmail.com</td>
-              <td>123456789</td>
-              <td class="role"><span>admin</span></td>
-              <td><input type="button" value="Delete" /></td>
-              <td class="last-cell"><input type="button" value="Modify" /></td>
-            </tr>
-            <tr>
-              <td class="first-cell">steve jobs</td>
-              <td>SteveJobs@gmail.com</td>
-              <td>123456789</td>
-              <td class="role"><span>admin</span></td>
-              <td><input type="button" value="Delete" /></td>
-              <td class="last-cell"><input type="button" value="Modify" /></td>
-            </tr>
-            <tr>
-              <td class="first-cell">steve jobs</td>
-              <td>SteveJobs@gmail.com</td>
-              <td>123456789</td>
-              <td class="role"><span>admin</span></td>
-              <td><input type="button" value="Delete" /></td>
-              <td class="last-cell"><input type="button" value="Modify" /></td>
-            </tr>
+            
           </tbody>
         </table>
       </div>
     </div>
+
+    <div class="place-popup hide-popup popup">
+      <div class="all-popups add-user">
+        <h3>add user</h3>
+        <form action="">
+          <div>
+            <label for="form_user-name">name</label>
+            <input type="text" id="form_user-name" class="text-input">
+          </div>
+          <div>
+            <label for="form_user-email">email</label>
+            <input type="text" id="form_user-email" class="text-input">
+          </div>
+          <div>
+            <label for="form_user-password">email</label>
+            <input type="text" id="form_user-password" class="text-input">
+          </div>
+          <div>
+            <label for="form_user-role">role</label>
+            <select name="role" id="form_user-role" class="select-role">
+              <option value="admin">admin</option>
+              <option value="user">user</option>
+            </select>
+          </div>
+          <div class="buttons-section">
+            <input type="button" value="Cancel" id="close_popup">
+            <input type="submit" value="Add" id="submit_place-user">
+          </div>
+        </form>
+      </div>
+  </div>
+
+  <div class="place-popup hide-popup popup-to-modify">
+      <div class="all-popups modify-user">
+        <h3>modify user informations</h3>
+        <form action="">
+          <div>
+            <label for="change_user-name">name</label>
+            <input type="text" id="change_user-name" class="text-input">
+          </div>
+          <div>
+            <label for="change_user-email">email</label>
+            <input type="text" id="change_user-email" class="text-input">
+          </div>
+          <div>
+            <label for="change_user-password">email</label>
+            <input type="text" id="change_user-password" class="text-input">
+          </div>
+          <div>
+            <label for="change_user-role"></label>
+            <select name="role" id="change_user-role" class="select-role">
+              <option value="admin">admin</option>
+              <option value="user">user</option>
+            </select>
+          </div>
+          <div class="buttons-section">
+            <input type="button" value="Cancel" id="close_modify-popup">
+            <input type="submit" value="Done" id="submit-modify">
+          </div>
+        </form>
+      </div>
+  </div>
+
+  <div class="place-popup hide-popup popup-to-delete">
+      <div class="all-popups delete-user">
+        <p>do you want to delete this user ?</p>
+        <div class="buttons-section delete_buttons-section">
+          <input type="button" value="Cancel" id="close_delete-popup">
+          <input type="submit" value="Done" id="delete">
+        </div>
+      </div>
+  </div>
+
+  <script src="./static/js/popup.js"></script>
   </body>
 </html>

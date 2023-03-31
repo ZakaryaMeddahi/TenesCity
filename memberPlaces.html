@@ -41,56 +41,98 @@
                         <th>image</th>
                         <!-- <th>rate</th> -->
                         <th></th>
-                        <th class="last-cell"><input type="button" value="Add place"></th>
+                        <th class="last-cell">
+                            <input type="button" value="Add place" id="open_popup">
+                        </th>
                     </tr>
                 </thead>
                 
                 <tbody>
                     
-                    <tr>
-                        <td class="first-cell">sidi merouan</td>
-                        <td>some descriptions</td>
-                        <td><img src="https://www.hdnicewallpapers.com/Walls/Big/Rainbow/Rainbow_on_Mountain_HD_Image.jpg" alt=""></td>
-                        <!-- <td class="role"><span><span class="stars">5</span> stars</span></td> -->
-                        <td><input type="button" value="Delete"></td>
-                        <td class="last-cell"><input type="button" value="Modify"></td>
+                    <tr class="table-row hidden">
+                        <td class="first-cell" id="place-name">sidi merouan</td>
+                        <td id="place-description">some descriptions</td>
+                        <td>
+                          <img id="place-image"
+                            src="https://www.hdnicewallpapers.com/Walls/Big/Rainbow/Rainbow_on_Mountain_HD_Image.jpg"
+                            alt=""
+                          />
+                        </td>
+                        <!-- <td class="role">
+                          <span><span class="stars">5</span> stars</span>
+                        </td> -->
+                        <td><input type="button" value="Delete" id="open_delete-popup"/></td>
+                        <td class="last-cell"><input type="button" value="Modify" id="open_modify-popup"/></td>
                     </tr>
-                    <tr>
-                        <td class="first-cell">sidi merouan</td>
-                        <td>some descriptions</td>
-                        <td><img src="https://www.hdnicewallpapers.com/Walls/Big/Rainbow/Rainbow_on_Mountain_HD_Image.jpg" alt=""></td>
-                        <!-- <td class="role"><span><span class="stars">5</span> stars</span></td> -->
-                        <td><input type="button" value="Delete"></td>
-                        <td class="last-cell"><input type="button" value="Modify"></td>
-                    </tr>
-                    <tr>
-                        <td class="first-cell">sidi merouan</td>
-                        <td>some descriptions</td>
-                        <td><img src="https://www.hdnicewallpapers.com/Walls/Big/Rainbow/Rainbow_on_Mountain_HD_Image.jpg" alt=""></td>
-                        <!-- <td class="role"><span><span class="stars">5</span> stars</span></td> -->
-                        <td><input type="button" value="Delete"></td>
-                        <td class="last-cell"><input type="button" value="Modify"></td>
-                    </tr>
-                    <tr>
-                        <td class="first-cell">sidi merouan</td>
-                        <td>some descriptions</td>
-                        <td><img src="https://www.hdnicewallpapers.com/Walls/Big/Rainbow/Rainbow_on_Mountain_HD_Image.jpg" alt=""></td>
-                        <!-- <td class="role"><span><span class="stars">5</span> stars</span></td> -->
-                        <td><input type="button" value="Delete"></td>
-                        <td class="last-cell"><input type="button" value="Modify"></td>
-                    </tr>
-                    <tr>
-                        <td class="first-cell">sidi merouan</td>
-                        <td>some descriptions</td>
-                        <td><img src="https://www.hdnicewallpapers.com/Walls/Big/Rainbow/Rainbow_on_Mountain_HD_Image.jpg" alt=""></td>
-                        <!-- <td class="role"><span><span class="stars">5</span> stars</span></td> -->
-                        <td><input type="button" value="Delete"></td>
-                        <td class="last-cell"><input type="button" value="Modify"></td>
-                    </tr>
+                    
                     
                 </tbody>
             </table>
         </div>
     </div>
+
+    <div class="place-popup hide-popup popup">
+        <div class="all-popups add-place">
+          <h3>add place</h3>
+          <form action="">
+            <div>
+              <label for="form_place-name">name</label>
+              <input type="text" id="form_place-name" class="text-input">
+            </div>
+            <div>
+              <label for="form_place-description">description</label>
+              <textarea name="description" id="form_place-description" class="text-input" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+              <label for="form_place-image" class="image-input">
+                image
+                <input type="file" id="form_place-image" accept="image/png, image/jpg">
+              </label>
+            </div>
+            <div class="buttons-section">
+              <input type="button" value="Cancel" id="close_popup">
+              <input type="submit" value="Add" id="submit_place-user">
+            </div>
+          </form>
+        </div>
+    </div>
+
+    <div class="place-popup hide-popup popup-to-modify">
+        <div class="all-popups modify-place">
+          <h3>modify place</h3>
+          <form action="">
+            <div>
+              <label for="change_place-name">name</label>
+              <input type="text" id="change_place-name" class="text-input">
+            </div>
+            <div>
+              <label for="change-place-description">description</label>
+              <textarea name="description" id="change_place-description" class="text-input" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+              <label for="change_place-image" class="image-input">
+                image
+                <input type="file" id="change_place-image" accept="image/png, image/jpg">
+              </label>
+            </div>
+            <div class="buttons-section">
+              <input type="button" value="Cancel" id="close_modify-popup">
+              <input type="submit" value="Done" id="submit-modify">
+            </div>
+          </form>
+        </div>
+    </div>
+
+    <div class="place-popup hide-popup popup-to-delete">
+        <div class="all-popups delete-place">
+          <p>do you want to delete this place ?</p>
+          <div class="buttons-section delete_buttons-section">
+            <input type="button" value="Cancel" id="close_delete-popup">
+            <input type="submit" value="Done" id="delete">
+          </div>
+        </div>
+    </div>
+    
+    <script src="./static/js/popup.js"></script>
 </body>
 </html>
