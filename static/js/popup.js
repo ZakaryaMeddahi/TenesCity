@@ -57,10 +57,10 @@ function modifyPlace_user(popupkind, getRow) {
   }
   // Modify user Row
   else {
-    tableRow.querySelector("#user-name").innerHTML = popupkind.querySelector("#form_user-name").value
-    tableRow.querySelector("#user-email").innerHTML = popupkind.querySelector("#form_user-email").value
-    tableRow.querySelector("#user-password").innerHTML = popupkind.querySelector("#form_user-password").value
-    tableRow.querySelector("#user-role").innerHTML = popupkind.querySelector("#form_user-role").value
+    getRow.querySelector("#user-name").innerHTML = popupkind.querySelector("#change_user-name").value
+    getRow.querySelector("#user-email").innerHTML = popupkind.querySelector("#change_user-email").value
+    getRow.querySelector("#user-password").innerHTML = popupkind.querySelector("#change_user-password").value
+    getRow.querySelector("#user-role").innerHTML = popupkind.querySelector("#change_user-role").value
   }
   
 }

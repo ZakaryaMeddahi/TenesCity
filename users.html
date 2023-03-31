@@ -59,8 +59,12 @@
               <td id="user-email">SteveJobs@gmail.com</td>
               <td id="user-password">123456789</td>
               <td class="role"><span id="user-role">admin</span></td>
-              <td><input type="button" value="Delete" id="open_delete-popup" /></td>
-              <td class="last-cell"><input type="button" value="Modify" /></td>
+              <td>
+                <input type="button" value="Delete" id="open_delete-popup" />
+              </td>
+              <td class="last-cell">
+                <input type="button" value="Modify" id="open_modify-popup" />
+              </td>
             </tr>
             
           </tbody>
@@ -85,7 +89,7 @@
             <input type="text" id="form_user-password" class="text-input">
           </div>
           <div>
-            <label for="form_user-role">role</label>
+            <label for="form_user-role">role: </label>
             <select name="role" id="form_user-role" class="select-role">
               <option value="admin">admin</option>
               <option value="user">user</option>
@@ -116,7 +120,7 @@
             <input type="text" id="change_user-password" class="text-input">
           </div>
           <div>
-            <label for="change_user-role"></label>
+            <label for="change_user-role">role: </label>
             <select name="role" id="change_user-role" class="select-role">
               <option value="admin">admin</option>
               <option value="user">user</option>
